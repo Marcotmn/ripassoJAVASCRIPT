@@ -15,7 +15,7 @@ if (x > y) {
 
 function maggiore(x, y) {
   if (x > y) {
-    return true;
+    return "x è maggiore di y";
   } else {
     return "y è maggiore di x";
   }
@@ -28,6 +28,25 @@ console.log(maggiore(x, y));
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
+
+let int = 4;
+
+if (int !== 5) {
+  console.log("not equal");
+} else {
+  console.log("is equal");
+}
+
+/////////////////
+
+function isEqual(int) {
+  if (int !== 5) {
+    return "is not equal";
+  } else {
+    return "is equal";
+  }
+}
+console.log(isEqual(int));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
