@@ -101,12 +101,62 @@ if (int1 === 8 && int2 === 8) {
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
+let totalShoppingCart = 40;
+let costoSpedizione = 10;
+
+if (totalShoppingCart > 50) {
+  console.log(
+    "Hai raggiunto il minimo d'ordine per la spedizione gratuita, il costo totale è pari a" +
+      totalShoppingCart +
+      "€"
+  );
+} else {
+  console.log(
+    "Il costo totale dell'ordine è pari a " +
+      (totalShoppingCart + costoSpedizione) +
+      "€"
+  );
+}
+
+//////////////////////
+
+function totaleCarrello(totalShoppingCart, costoSpedizione) {
+  if (totalShoppingCart > 50) {
+    return (
+      "Hai raggiunto il minimo d'ordine per la spedizione gratuita, il costo totale è pari a " +
+      totalShoppingCart +
+      "€"
+    );
+  } else {
+    return (
+      "Non hai raggiunto il minimo d'ordine per la spedizione gratuita, il costo totale è pari a " +
+      (totalShoppingCart + costoSpedizione) +
+      "€"
+    );
+  }
+}
+
+console.log(totaleCarrello(totalShoppingCart, costoSpedizione));
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
+
+if (totalShoppingCart - (totalShoppingCart * 20) / 100 > 50) {
+  console.log(
+    "hai diritto alla spedizione gratuita, il costo totale è " +
+      totalShoppingCart * 0.2
+  );
+} else {
+  console.log(
+    "non ha raggiunto il minimo d'ordine per la spedizione gratuita, il costo totale è di " +
+      (totalShoppingCart - totalShoppingCart * 0.2 + costoSpedizione) +
+      "€"
+  );
+}
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
