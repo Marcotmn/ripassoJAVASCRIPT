@@ -112,14 +112,22 @@ console.log(sottrazione3(x, y));
 var name1 = "john";
 var name2 = "John";
 
+if (name1 === name2) {
+  console.log("i due nomi sono uguali");
+} else if (name1.toLowerCase() === name2.toLowerCase()) {
+  console.log("true but with .toLowerCase() only");
+} else {
+  console.log("i due nomi son diversi");
+}
+
+/////////////////////////////
+
 function uguaglianza(name1, name2) {
   if (name1 === name2) {
     return true;
-  } else if (name1.toLowerCase() === name2.toLowerCase()) {
-    console.log("true but with .toLowerCase() only");
-    return true;
   } else {
-    return false;
+    name1.toLowerCase() === name2.toLowerCase();
+    return "true, just with tolowercase";
   }
 }
 
