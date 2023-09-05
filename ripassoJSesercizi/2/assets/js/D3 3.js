@@ -54,6 +54,26 @@ console.log(isEqual(int));
   Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
+let divisibile = 25;
+
+if (divisibile % 5 == 0) {
+  console.log("il numero è divisibile per 5");
+} else {
+  console.log("il numero non è divisibile per 5");
+}
+
+///////////////////
+
+function isDiv(divisibile) {
+  if (divisibile % 5 == 0) {
+    return "divisibile per 5";
+  } else {
+    return "non è divisibile per 5";
+  }
+}
+
+console.log(isDiv(divisibile));
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 4
@@ -61,6 +81,19 @@ console.log(isEqual(int));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+let int1 = 4;
+let int2 = 8;
+
+if (int1 === 8 && int2 === 8) {
+  console.log("almeno uno dei due interi è uguale a 8");
+} else if (int1 === 8) {
+  console.log("il primo intero fornito è uguale a 8");
+} else if (int2 === 8) {
+  console.log("il secondo intero fornito è uguale a 8");
+} else {
+  console.log("nessuna delle condizioni è soddisfatta");
+}
 
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
