@@ -179,11 +179,12 @@ let i = 0;
 let totalMass = 0;
 
 while (i < starWarsCharacters.length) {
-  totalMass += starWarsCharacters[i].mass;
+  totalMass += parseInt(starWarsCharacters[i].mass);
   i++;
 }
 
 console.log("la massa totale è " + totalMass);
+
 /* ESERCIZIO 7
 
 Crea uno switch statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'impotetica astronave contenente i personaggi dell'array "starWarsCharacters"
@@ -197,6 +198,18 @@ Se la massa è superiore a 1000 stampa in console: "DANGER! OVERLOAD ALERT: Jump
 
 Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
+
+if (totalMass < 500) {
+  console.log("ship is under loaded");
+} else if (totalMass == 500) {
+  console.log("Ship is half loaded");
+} else if (totalMass > 700 && totalMass < 900) {
+  console.log("Warning: Load is over 700");
+} else if (totalMass > 900 && totalMass < 1000) {
+  console.log("Critical Load: Over 900");
+} else if (totalMass > 1000) {
+  console.log("DANGER! OVERLOAD ALERT: Jump ship now!");
+}
 
 /* ESERCIZIO 8
 Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente)
