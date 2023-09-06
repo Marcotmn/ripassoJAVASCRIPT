@@ -172,27 +172,47 @@ if (totalShoppingCart - (totalShoppingCart * 20) / 100 > 50) {
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 
+let number = "6";
+
+function isAnumberOrNot(number) {
+  return typeof number;
+}
+
+console.log(isAnumberOrNot(number));
+
+/////////////
+
+if (typeof number !== "string") {
+  console.log("il valore fornito è un numero");
+} else {
+  console.log("il valore fornito è una stringa");
+}
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
+let numeroFornito = 17;
+
+if (numeroFornito % 2 == 0) {
+  console.log("il numero fornito è pari");
+} else {
+  console.log("il numero fornito è dispari");
+}
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10
-  Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
-  let val = 7
-  if (val < 10) {
-      console.log("Meno di 10");
-    } else if (val < 5) {
-      console.log("Meno di 5");
-    } else {
-      console.log("Uguale a 10 o maggiore");
-    }
-*/
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+  Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.*/
+let val = 5;
+if (val < 5) {
+  console.log("Meno di 5");
+} else if (val < 10) {
+  console.log("Meno di 10");
+} else {
+  console.log("Uguale a 10 o maggiore");
+}
 
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
@@ -204,11 +224,19 @@ const me = {
   skills: ["javascript", "html", "css"],
 };
 
+me.city = "toronto";
+
+console.log(me);
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
+
+delete me.lastName;
+
+console.log(me);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -216,11 +244,23 @@ const me = {
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
+me.skills.pop();
+
+console.log(me);
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
+
+let mioArray = [];
+
+for (let i = 1; i <= 10; i++) {
+  mioArray.push(i);
+}
+
+console.log(mioArray);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -229,3 +269,7 @@ const me = {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+mioArray[mioArray.length - 1] = 100;
+
+console.log(mioArray);
