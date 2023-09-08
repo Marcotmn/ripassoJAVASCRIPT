@@ -142,10 +142,31 @@ console.log(upperFirst(string3));
  della stringa originale.
 */
 
+function cutString(string3) {
+  let arr = string3.split("");
+
+  arr.pop();
+  arr.shift();
+  return arr.join("");
+}
+
+console.log(cutString(string3));
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let numero = 5;
+let array = [];
+
+function giveMeRandom(numero, array) {
+  for (let i = 0; i < numero; i++) {
+    let numeriRandom = Math.floor(Math.random() * 11);
+    array.push(numeriRandom);
+  }
+  return array;
+}
+
+console.log(giveMeRandom(numero, array));
